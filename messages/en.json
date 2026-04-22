@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Home",
+    "stacks": "Stacks",
+    "howItWorks": "How it works",
+    "faq": "FAQ",
+    "signIn": "Sign in",
+    "signUp": "Get started",
+    "store": "Store",
+    "about": "About",
+    "help": "Help"
+  },
+  "search": {
+    "placeholder": "Search country or region...",
+    "popular": "Popular destinations",
+    "regional": "Regional plans",
+    "noResults": "No results for \"{query}\""
+  },
+  "hero": {
+    "eyebrow": "190+ countries covered",
+    "title": "Travel the world,\nstay {connected}",
+    "titleHighlight": "connected",
+    "lead": "Instant eSIM data plans for modern travelers. Activate in minutes, no physical SIM required.",
+    "cta": "Get started free",
+    "ctaStore": "Browse eSIM store",
+    "appStore": "Download on the",
+    "appStoreName": "App Store",
+    "googlePlay": "Get it on",
+    "googlePlayName": "Google Play"
+  },
+  "plans": {
+    "tabCountry": "By Country",
+    "tabRegion": "By Region",
+    "tabPlans": "All Plans",
+    "from": "from",
+    "viewPlans": "View plans",
+    "days": "{count} days",
+    "gb": "{count} GB",
+    "unlimited": "Unlimited"
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "title": "Three steps to global connectivity",
+    "step1Title": "Pick your plan",
+    "step1Desc": "Choose from 190+ countries and regions. Pay once, no subscriptions.",
+    "step2Title": "Scan & install",
+    "step2Desc": "Scan the QR code or tap to install. No physical SIM swap needed.",
+    "step3Title": "Land & connect",
+    "step3Desc": "Arrive at your destination and connect instantly. No roaming fees."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Common questions",
+    "items": [
+      {
+        "q": "What is an eSIM?",
+        "a": "An eSIM (embedded SIM) is a digital SIM card built into your device. It lets you activate a cellular plan without a physical SIM card — perfect for travelers."
+      },
+      {
+        "q": "Which devices support eSIM?",
+        "a": "Most modern smartphones support eSIM including iPhone XS and later, Google Pixel 3 and later, Samsung Galaxy S20 and later, and many other devices."
+      },
+      {
+        "q": "How do I install my eSIM?",
+        "a": "After purchase, you'll receive a QR code. Go to your phone's cellular settings, choose 'Add eSIM', and scan the code. Activation takes under 2 minutes."
+      },
+      {
+        "q": "Can I use my eSIM in multiple countries?",
+        "a": "Yes! Regional plans cover multiple countries. For single-country plans, you can purchase additional plans for each destination."
+      },
+      {
+        "q": "When does my data plan start?",
+        "a": "Your plan activates when you first connect in the destination country — not at purchase time. You won't waste data while traveling to your destination."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to roam?",
+    "subtitle": "Join 500,000+ travelers who stay connected worldwide.",
+    "button": "Get your eSIM now",
+    "paymentMethods": "Secure payments via"
+  },
+  "footer": {
+    "tagline": "Global eSIM data for modern travelers.",
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "links": {
+      "esimStore": "eSIM Store",
+      "pricing": "Pricing",
+      "coverage": "Coverage map",
+      "blog": "Blog",
+      "about": "About us",
+      "careers": "Careers",
+      "press": "Press",
+      "privacy": "Privacy policy",
+      "terms": "Terms of service",
+      "helpCenter": "Help center",
+      "contact": "Contact us",
+      "status": "System status"
+    },
+    "copyright": "© {year} RoveStack. All rights reserved."
+  },
+  "auth": {
+    "login": "Sign in",
+    "register": "Create account",
+    "logout": "Sign out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "Full name",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "orContinueWith": "Or continue with",
+    "google": "Continue with Google",
+    "apple": "Continue with Apple",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "rememberMe": "Remember me",
+    "orWith": "or",
+    "resetPassword": "Reset password",
+    "resetPasswordSubtitle": "Enter your email and we'll send you a reset link.",
+    "sendResetLink": "Send reset link",
+    "sending": "Sending…",
+    "checkInbox": "Check your inbox — we've sent the reset link.",
+    "backToLogin": "Back to sign in",
+    "signingIn": "Signing in…",
+    "creatingAccount": "Creating account…",
+    "fullName": "Full name"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "notFound": "Page not found",
+    "unauthorized": "Please sign in to continue"
+  }
+}

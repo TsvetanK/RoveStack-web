@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "stacks": "Stacks",
+    "howItWorks": "Cómo funciona",
+    "faq": "FAQ",
+    "signIn": "Iniciar sesión",
+    "signUp": "Empezar",
+    "store": "Tienda",
+    "about": "Nosotros",
+    "help": "Ayuda"
+  },
+  "search": {
+    "placeholder": "Buscar país o región...",
+    "popular": "Destinos populares",
+    "regional": "Planes regionales",
+    "noResults": "Sin resultados para \"{query}\""
+  },
+  "hero": {
+    "eyebrow": "Más de 190 países cubiertos",
+    "title": "Viaja por el mundo,\nmanténte {connected}",
+    "titleHighlight": "conectado",
+    "lead": "Planes de datos eSIM instantáneos para viajeros modernos. Activa en minutos, sin SIM física.",
+    "cta": "Empezar gratis",
+    "ctaStore": "Tienda eSIM",
+    "appStore": "Descargar en el",
+    "appStoreName": "App Store",
+    "googlePlay": "Disponible en",
+    "googlePlayName": "Google Play"
+  },
+  "plans": {
+    "tabCountry": "Por país",
+    "tabRegion": "Por región",
+    "tabPlans": "Todos los planes",
+    "from": "desde",
+    "viewPlans": "Ver planes",
+    "days": "{count} días",
+    "gb": "{count} GB",
+    "unlimited": "Ilimitado"
+  },
+  "howItWorks": {
+    "label": "Cómo funciona",
+    "title": "Tres pasos hacia la conectividad global",
+    "step1Title": "Elige tu plan",
+    "step1Desc": "Elige entre más de 190 países y regiones. Pago único, sin suscripciones.",
+    "step2Title": "Escanear e instalar",
+    "step2Desc": "Escanea el código QR o toca para instalar. No se necesita cambio de SIM física.",
+    "step3Title": "Llegar y conectar",
+    "step3Desc": "Llega a tu destino y conéctate al instante. Sin tarifas de roaming."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿Qué es una eSIM?",
+        "a": "Una eSIM (SIM integrada) es una tarjeta SIM digital integrada en tu dispositivo. Te permite activar un plan de telefonía sin tarjeta SIM física — perfecta para viajeros."
+      },
+      {
+        "q": "¿Qué dispositivos son compatibles con eSIM?",
+        "a": "La mayoría de los smartphones modernos son compatibles con eSIM, incluyendo iPhone XS y posteriores, Google Pixel 3 y posteriores, Samsung Galaxy S20 y posteriores, y muchos otros dispositivos."
+      },
+      {
+        "q": "¿Cómo instalo mi eSIM?",
+        "a": "Tras la compra, recibirás un código QR. Ve a la configuración de datos móviles de tu teléfono, selecciona 'Añadir eSIM' y escanea el código. La activación tarda menos de 2 minutos."
+      },
+      {
+        "q": "¿Puedo usar mi eSIM en varios países?",
+        "a": "¡Sí! Los planes regionales cubren varios países. Para planes de un solo país, puedes comprar planes adicionales para cada destino."
+      },
+      {
+        "q": "¿Cuándo empieza mi plan de datos?",
+        "a": "Tu plan se activa cuando te conectas por primera vez en el país de destino, no en el momento de la compra. No desperdiciarás datos mientras viajas a tu destino."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Listo para viajar conectado?",
+    "subtitle": "Únete a más de 500.000 viajeros que permanecen conectados en todo el mundo.",
+    "button": "Obtén tu eSIM ahora",
+    "paymentMethods": "Pagos seguros a través de"
+  },
+  "footer": {
+    "tagline": "Datos eSIM globales para viajeros modernos.",
+    "product": "Producto",
+    "company": "Empresa",
+    "support": "Soporte",
+    "links": {
+      "esimStore": "Tienda eSIM",
+      "pricing": "Precios",
+      "coverage": "Mapa de cobertura",
+      "blog": "Blog",
+      "about": "Sobre nosotros",
+      "careers": "Empleo",
+      "press": "Prensa",
+      "privacy": "Política de privacidad",
+      "terms": "Condiciones de servicio",
+      "helpCenter": "Centro de ayuda",
+      "contact": "Contáctanos",
+      "status": "Estado del sistema"
+    },
+    "copyright": "© {year} RoveStack. Todos los derechos reservados."
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "logout": "Cerrar sesión",
+    "email": "Email",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "name": "Nombre completo",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "orContinueWith": "O continúa con",
+    "google": "Continuar con Google",
+    "apple": "Continuar con Apple",
+    "signIn": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "rememberMe": "Recordarme",
+    "orWith": "o",
+    "resetPassword": "Restablecer contraseña",
+    "resetPasswordSubtitle": "Introduce tu email y te enviaremos un enlace de restablecimiento.",
+    "sendResetLink": "Enviar enlace",
+    "sending": "Enviando…",
+    "checkInbox": "Revisa tu bandeja de entrada — hemos enviado el enlace.",
+    "backToLogin": "Volver a iniciar sesión",
+    "signingIn": "Iniciando sesión…",
+    "creatingAccount": "Creando cuenta…",
+    "fullName": "Nombre completo"
+  },
+  "errors": {
+    "generic": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "notFound": "Página no encontrada",
+    "unauthorized": "Por favor inicia sesión para continuar"
+  }
+}

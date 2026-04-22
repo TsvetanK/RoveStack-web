@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "stacks": "Stacks",
+    "howItWorks": "Comment ça marche",
+    "faq": "FAQ",
+    "signIn": "Se connecter",
+    "signUp": "Commencer",
+    "store": "Boutique",
+    "about": "À propos",
+    "help": "Aide"
+  },
+  "search": {
+    "placeholder": "Rechercher un pays ou une région...",
+    "popular": "Destinations populaires",
+    "regional": "Plans régionaux",
+    "noResults": "Aucun résultat pour \"{query}\""
+  },
+  "hero": {
+    "eyebrow": "Plus de 190 pays couverts",
+    "title": "Voyagez dans le monde,\nrestez {connected}",
+    "titleHighlight": "connecté",
+    "lead": "Plans de données eSIM instantanés pour les voyageurs modernes. Activation en quelques minutes, sans carte SIM physique.",
+    "cta": "Commencer gratuitement",
+    "ctaStore": "Boutique eSIM",
+    "appStore": "Télécharger sur l'",
+    "appStoreName": "App Store",
+    "googlePlay": "Disponible sur",
+    "googlePlayName": "Google Play"
+  },
+  "plans": {
+    "tabCountry": "Par pays",
+    "tabRegion": "Par région",
+    "tabPlans": "Tous les plans",
+    "from": "à partir de",
+    "viewPlans": "Voir les plans",
+    "days": "{count} jours",
+    "gb": "{count} Go",
+    "unlimited": "Illimité"
+  },
+  "howItWorks": {
+    "label": "Comment ça marche",
+    "title": "Trois étapes vers la connectivité mondiale",
+    "step1Title": "Choisissez votre plan",
+    "step1Desc": "Choisissez parmi 190+ pays et régions. Paiement unique, sans abonnement.",
+    "step2Title": "Scanner & installer",
+    "step2Desc": "Scannez le QR code ou appuyez pour installer. Aucun changement de carte SIM physique nécessaire.",
+    "step3Title": "Arriver & se connecter",
+    "step3Desc": "Arrivez à destination et connectez-vous instantanément. Sans frais d'itinérance."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Qu'est-ce qu'une eSIM ?",
+        "a": "Une eSIM (SIM intégrée) est une carte SIM numérique intégrée à votre appareil. Elle vous permet d'activer un forfait mobile sans carte SIM physique — parfait pour les voyageurs."
+      },
+      {
+        "q": "Quels appareils prennent en charge l'eSIM ?",
+        "a": "La plupart des smartphones modernes supportent l'eSIM, notamment iPhone XS et ultérieur, Google Pixel 3 et ultérieur, Samsung Galaxy S20 et ultérieur, et bien d'autres appareils."
+      },
+      {
+        "q": "Comment installer mon eSIM ?",
+        "a": "Après l'achat, vous recevrez un QR code. Accédez aux paramètres cellulaires de votre téléphone, choisissez 'Ajouter une eSIM' et scannez le code. L'activation prend moins de 2 minutes."
+      },
+      {
+        "q": "Puis-je utiliser mon eSIM dans plusieurs pays ?",
+        "a": "Oui ! Les plans régionaux couvrent plusieurs pays. Pour les plans par pays, vous pouvez acheter des plans supplémentaires pour chaque destination."
+      },
+      {
+        "q": "Quand mon forfait data commence-t-il ?",
+        "a": "Votre forfait s'active quand vous vous connectez pour la première fois dans le pays de destination — pas au moment de l'achat. Vous ne gaspillez pas de données en voyageant vers votre destination."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à voyager connecté ?",
+    "subtitle": "Rejoignez plus de 500 000 voyageurs qui restent connectés dans le monde entier.",
+    "button": "Obtenir votre eSIM",
+    "paymentMethods": "Paiements sécurisés via"
+  },
+  "footer": {
+    "tagline": "Données eSIM mondiales pour les voyageurs modernes.",
+    "product": "Produit",
+    "company": "Entreprise",
+    "support": "Support",
+    "links": {
+      "esimStore": "Boutique eSIM",
+      "pricing": "Tarifs",
+      "coverage": "Carte de couverture",
+      "blog": "Blog",
+      "about": "À propos",
+      "careers": "Carrières",
+      "press": "Presse",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "helpCenter": "Centre d'aide",
+      "contact": "Nous contacter",
+      "status": "État du système"
+    },
+    "copyright": "© {year} RoveStack. Tous droits réservés."
+  },
+  "auth": {
+    "login": "Se connecter",
+    "register": "Créer un compte",
+    "logout": "Se déconnecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "name": "Nom complet",
+    "forgotPassword": "Mot de passe oublié ?",
+    "noAccount": "Pas encore de compte ?",
+    "hasAccount": "Déjà un compte ?",
+    "orContinueWith": "Ou continuer avec",
+    "google": "Continuer avec Google",
+    "apple": "Continuer avec Apple",
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "rememberMe": "Se souvenir de moi",
+    "orWith": "ou",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "resetPasswordSubtitle": "Entrez votre email et nous vous enverrons un lien de réinitialisation.",
+    "sendResetLink": "Envoyer le lien",
+    "sending": "Envoi…",
+    "checkInbox": "Vérifiez votre boîte mail — nous avons envoyé le lien.",
+    "backToLogin": "Retour à la connexion",
+    "signingIn": "Connexion…",
+    "creatingAccount": "Création du compte…",
+    "fullName": "Nom complet"
+  },
+  "errors": {
+    "generic": "Une erreur s'est produite. Veuillez réessayer.",
+    "notFound": "Page introuvable",
+    "unauthorized": "Veuillez vous connecter pour continuer"
+  }
+}
