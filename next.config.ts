@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
   experimental: {
     viewTransition: true,
   },
+  logging: {
+    fetches: {
+      fullUrl: true,
+    },
+  },
   images: {
     remotePatterns: [
       {

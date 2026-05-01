@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { localeLabels, type Locale, locales } from "@/i18n/config";
@@ -24,8 +23,11 @@ export function Navbar({ locale }: NavbarProps) {
   const t = useTranslations("nav");
   const tAuth = useTranslations("auth");
   const pathname = usePathname();
+  const router = useRouter();
   const { currency, setCurrency, currencies, currenciesLoading } = usePreferences();
   const { user, logout } = useAuth();
+  const isHomePage = pathname === "/" || /^\/[a-z]{2}$/.test(pathname);
+
   const [langOpen, setLangOpen] = useState(false);
   const [currOpen, setCurrOpen] = useState(false);
   const [userOpen, setUserOpen] = useState(false);
@@ -67,8 +69,11 @@ export function Navbar({ locale }: NavbarProps) {
 
   return (
     <nav
-      className="sticky top-0 z-50 pb-[30px]"
+      className={isHomePage ? "pb-[30px]" : ""}
       style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 9999,
         background: "rgba(245,241,234,0.82)",
         backdropFilter: "saturate(180%) blur(20px)",
         WebkitBackdropFilter: "saturate(180%) blur(20px)",
@@ -133,18 +138,17 @@ export function Navbar({ locale }: NavbarProps) {
                 {locales.map((loc) => {
                   const info = localeLabels[loc];
                   return (
-                    <Link
+                    <button
                       key={loc}
-                      href={`/${loc}`}
                       role="menuitem"
-                      onClick={closeAll}
+                      onClick={() => { router.replace(pathname, { locale: loc }); closeAll(); }}
                       className={`popover-item${loc === locale ? " selected" : ""}`}
                     >
                       <span className="pop-flag">{info.flag}</span>
                       <span className="pop-label">{info.nativeName}</span>
                       <span className="pop-sub">{loc.toUpperCase()}</span>
                       <CheckIcon />
-                    </Link>
+                    </button>
                   );
                 })}
               </div>
@@ -232,10 +236,11 @@ export function Navbar({ locale }: NavbarProps) {
           </div>
         </div>
 
-        {/* Search row */}
-        <div className="flex items-center gap-3 pt-10 relative">
-          <CountrySearch />
-        </div>
+        {isHomePage && (
+          <div className="flex items-center gap-3 pt-10 relative">
+            <CountrySearch />
+          </div>
+        )}
       </div>
     </nav>
   );

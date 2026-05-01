@@ -3,17 +3,41 @@ import { useTranslations } from "next-intl";
 import { ButtonLink, ArrowIcon } from "@/components/ui/Button";
 
 const AppleIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
     <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
   </svg>
 );
 
 const GooglePlayIcon = () => (
-  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z" fill="#00C3FF"/>
-    <path d="M16.81 15.02l-2.81-2.813L3.61 22.39c.197.045.41.025.62-.103L16.81 15.02z" fill="#FF3A44"/>
-    <path d="M20.16 10.81c.75.411.75 1.488 0 1.9l-3.35 1.945-3.019-3.049 3.02-3.021 3.349 2.225z" fill="#FFC400"/>
-    <path d="M14 12.207L3.61 1.814c.197-.045.41-.025.62.103L16.81 9.39 14 12.207z" fill="#00E676"/>
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+  >
+    <path
+      d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92z"
+      fill="#00C3FF"
+    />
+    <path
+      d="M16.81 15.02l-2.81-2.813L3.61 22.39c.197.045.41.025.62-.103L16.81 15.02z"
+      fill="#FF3A44"
+    />
+    <path
+      d="M20.16 10.81c.75.411.75 1.488 0 1.9l-3.35 1.945-3.019-3.049 3.02-3.021 3.349 2.225z"
+      fill="#FFC400"
+    />
+    <path
+      d="M14 12.207L3.61 1.814c.197-.045.41-.025.62.103L16.81 9.39 14 12.207z"
+      fill="#00E676"
+    />
   </svg>
 );
 
@@ -61,7 +85,8 @@ export function HeroSection() {
               className="display text-[clamp(3rem,7vw,5.75rem)] font-normal mb-7"
               style={{ fontVariationSettings: "'SOFT' 40" }}
             >
-              Travel the world,<br />
+              Travel the world,
+              <br />
               stay{" "}
               <em
                 className="not-italic text-accent relative"
@@ -78,13 +103,18 @@ export function HeroSection() {
 
             {/* Lead */}
             <p className="text-[1.175rem] leading-[1.55] text-mute max-w-[520px] mb-9 font-normal">
-              Global data on your phone in under a minute. Choose from 200+ locations.
-              No SIM swap, no roaming fees.
+              Global data on your phone in under a minute. Choose from 200+
+              locations. No SIM swap, no roaming fees.
             </p>
 
             {/* CTA buttons */}
             <div className="flex gap-3 mb-[18px]">
-              <ButtonLink href="/auth/register" variant="orange" lg className="flex-1">
+              <ButtonLink
+                href="/auth/register"
+                variant="orange"
+                lg
+                className="flex-1"
+              >
                 {t("cta")} <ArrowIcon />
               </ButtonLink>
               <ButtonLink href="/esim" variant="black" lg className="flex-1">
@@ -94,14 +124,22 @@ export function HeroSection() {
 
             {/* App store buttons */}
             <div className="flex gap-3.5 flex-wrap">
-              <a href="#" aria-label="Download on the App Store" className="app-btn">
+              <a
+                href="#"
+                aria-label="Download on the App Store"
+                className="app-btn"
+              >
                 <AppleIcon />
                 <span className="app-btn-text">
                   <span className="app-btn-small">{t("appStore")}</span>
                   <span className="app-btn-large">{t("appStoreName")}</span>
                 </span>
               </a>
-              <a href="#" aria-label="Get it on Google Play" className="app-btn">
+              <a
+                href="#"
+                aria-label="Get it on Google Play"
+                className="app-btn"
+              >
                 <GooglePlayIcon />
                 <span className="app-btn-text">
                   <span className="app-btn-small">{t("googlePlay")}</span>

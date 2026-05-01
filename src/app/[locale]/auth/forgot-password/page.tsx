@@ -1,11 +1,5 @@
-import { ForgotPasswordForm } from "@/components/auth/ForgotPasswordForm";
+import { AuthPage } from "@/components/auth/AuthPage";
 
 export default function ForgotPasswordPage() {
-  return (
-    <div className="auth-page">
-      <div className="auth-modal auth-modal--standalone">
-        <ForgotPasswordForm />
-      </div>
-    </div>
-  );
+  return <AuthPage />;
 }

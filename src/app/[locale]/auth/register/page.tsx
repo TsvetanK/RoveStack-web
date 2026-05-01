@@ -1,11 +1,5 @@
-import { RegisterForm } from "@/components/auth/RegisterForm";
+import { AuthPage } from "@/components/auth/AuthPage";
 
 export default function RegisterPage() {
-  return (
-    <div className="auth-page">
-      <div className="auth-modal auth-modal--standalone">
-        <RegisterForm />
-      </div>
-    </div>
-  );
+  return <AuthPage />;
 }

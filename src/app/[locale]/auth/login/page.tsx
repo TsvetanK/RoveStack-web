@@ -1,11 +1,5 @@
-import { LoginForm } from "@/components/auth/LoginForm";
+import { AuthPage } from "@/components/auth/AuthPage";
 
 export default function LoginPage() {
-  return (
-    <div className="auth-page">
-      <div className="auth-modal auth-modal--standalone">
-        <LoginForm />
-      </div>
-    </div>
-  );
+  return <AuthPage />;
 }

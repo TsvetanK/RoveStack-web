@@ -52,12 +52,9 @@ http.interceptors.response.use(
       "An unexpected error occurred";
     const errors = error.response?.data?.errors;
 
-    // 401 — clear stale token so the user is sent to login
+    // 401 — clear stale token; redirect is handled by the caller or AuthProvider
     if (status === 401) {
       clearToken();
-      if (typeof window !== "undefined") {
-        window.location.href = "/auth/login";
-      }
     }
 
     return Promise.reject(new RoveApiError(status ?? 0, { message, errors }));
@@ -111,6 +108,27 @@ export const api = {
   },
   delete<T>(path: string, config?: ExtraConfig) {
     return http.delete<T>(path, config).then((r) => r.data);
+  },
+};
+
+// ── Server-side fetch (Server Components only) ───────────────────────────────
+// Uses native fetch so Next.js cache/revalidate options work.
+// axios interceptors rely on localStorage and cannot run on the server.
+interface ServerFetchOptions {
+  revalidate?: number;
+  tags?: readonly string[];
+}
+
+export const serverApi = {
+  async get<T>(path: string, options: ServerFetchOptions = {}): Promise<T> {
+    const res = await fetch(`${API_BASE}${path}`, {
+      next: {
+        revalidate: options.revalidate,
+        tags: options.tags ? [...options.tags] : undefined,
+      },
+    });
+    if (!res.ok) throw new RoveApiError(res.status, { message: res.statusText });
+    return res.json() as Promise<T>;
   },
 };
 
