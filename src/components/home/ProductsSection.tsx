@@ -53,11 +53,11 @@ export function ProductsSection() {
     const signal = controller.signal;
 
     Promise.all([
-      api.get<ApiList<Country>>("/esim", { signal }),
+      api.get<ApiList<Country>>("/esim?popular=true", { signal }),
       api.get<ApiList<Region>>("/regions", { signal }),
     ])
       .then(([cs, rs]) => {
-        setCountries(cs.data.slice(0, 8));
+        setCountries(cs.data);
         setRegions(rs.data);
         setLoading(false);
       })

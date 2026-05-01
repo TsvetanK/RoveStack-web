@@ -1546,6 +1546,9 @@ button {
   color: #fff;
   border-color: transparent;
 }
+.plan-card .cc-arrow-hover { display: none; }
+.plan-card:hover .cc-arrow-default { display: none; }
+.plan-card:hover .cc-arrow-hover { display: contents; }
 
 .plan-card-check-badge {
   position: absolute;

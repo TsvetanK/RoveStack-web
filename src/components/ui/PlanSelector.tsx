@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { PlanCard, type PlanCardProps } from "./PlanCard";
 
 type Plan = Omit<PlanCardProps, "selected" | "onSelect">;
@@ -9,6 +10,7 @@ interface Props {
   plans: Plan[];
   countryName: string;
   countryFlag: string;
+  countrySlug: string;
 }
 
 function formatTotal(price: string, qty: number): string {
@@ -20,9 +22,20 @@ function formatTotal(price: string, qty: number): string {
   return `${symbol}${num.toFixed(2)}`;
 }
 
-export function PlanSelector({ plans, countryName, countryFlag }: Props) {
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+export function PlanSelector({ plans, countryName, countryFlag, countrySlug }: Props) {
+  const searchParams = useSearchParams();
+
+  const initialPlan = plans.find((p) => p.slug === searchParams.get("plan")) ?? null;
+
+  const [selectedId, setSelectedId] = useState<number | null>(initialPlan?.id ?? null);
   const [qty, setQty] = useState(1);
+
+  useEffect(() => {
+    if (initialPlan) {
+      window.history.replaceState(null, "", `/esim/${countrySlug}?plan=${initialPlan.slug}`);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const selected = plans.find((p) => p.id === selectedId) ?? null;
   const dataLabel = selected
@@ -42,8 +55,13 @@ export function PlanSelector({ plans, countryName, countryFlag }: Props) {
             {...p}
             selected={p.id === selectedId}
             onSelect={() => {
-              setSelectedId(p.id === selectedId ? null : p.id);
+              const next = p.id === selectedId ? null : p.id;
+              setSelectedId(next);
               setQty(1);
+              const url = next
+                ? `/esim/${countrySlug}?plan=${p.slug}`
+                : `/esim/${countrySlug}`;
+              window.history.replaceState(null, "", url);
             }}
           />
         ))}

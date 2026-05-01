@@ -104,6 +104,7 @@ export default async function CountryPage(
       <PlanSelector
         countryName={country.name}
         countryFlag={country.flag_emoji}
+        countrySlug={country.slug}
         plans={products.map((p) => ({
           id: p.id,
           slug: p.slug,

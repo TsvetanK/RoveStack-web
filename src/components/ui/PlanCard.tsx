@@ -1,3 +1,9 @@
+const ArrowDiag = () => (
+  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+    <path d="M3 11L11 3m0 0H5m6 0v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const CheckIcon = () => (
   <svg
     width="14"
@@ -80,13 +86,7 @@ export function PlanCard({
       className={`plan-card${selected ? " selected" : ""}`}
       aria-pressed={selected}
     >
-      {selected && (
-        <span className="plan-card-check-badge" aria-hidden="true">
-          <CheckIcon />
-        </span>
-      )}
-
-      <div className="plan-card-body">
+<div className="plan-card-body">
         <div className="plan-data-label">{dataLabel + " data"}</div>
         <div className="plan-card-meta-row">
           <span>
@@ -112,7 +112,7 @@ export function PlanCard({
       <div className="cc-bottom">
         <div className="cc-price">{price}</div>
         <div className={`cc-arrow${selected ? " selected" : ""}`}>
-          <CheckIcon />
+          {selected ? <CheckIcon /> : <><span className="cc-arrow-default"><ArrowDiag /></span><span className="cc-arrow-hover"><CheckIcon /></span></>}
         </div>
       </div>
     </button>
