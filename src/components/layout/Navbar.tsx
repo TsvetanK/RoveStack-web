@@ -209,11 +209,11 @@ export function Navbar({ locale }: NavbarProps) {
                 <div className={`popover${userOpen ? " open" : ""}`} role="menu">
                   <div className="popover-header">{user.name}</div>
                   <div className="popover-sub-header">{user.email}</div>
-                  <Link href="/dashboard" role="menuitem" onClick={closeAll} className="popover-item">
-                    <span className="material-icons pop-icon">dashboard</span>
-                    <span className="pop-label">Dashboard</span>
+                  <Link href="/profile" role="menuitem" onClick={closeAll} className="popover-item">
+                    <span className="material-icons pop-icon">person</span>
+                    <span className="pop-label">Profile</span>
                   </Link>
-                  <Link href="/dashboard/esims" role="menuitem" onClick={closeAll} className="popover-item">
+                  <Link href="/orders" role="menuitem" onClick={closeAll} className="popover-item">
                     <span className="material-icons pop-icon">sim_card</span>
                     <span className="pop-label">My eSIMs</span>
                   </Link>

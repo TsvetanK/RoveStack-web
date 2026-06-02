@@ -119,11 +119,7 @@ export function PlanSelector({ plans, countryName, countryFlag, countrySlug }: P
           </div>
 
           <a
-            href={
-              selected
-                ? `/esim/${plans[0]?.slug.split("/")[0]}/${selected.slug}`
-                : "#"
-            }
+            href={selected ? `/esim/${countrySlug}/checkout?plan=${selected.slug}` : "#"}
             className="btn-orange plan-footer-buy"
           >
             Buy now
