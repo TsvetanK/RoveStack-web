@@ -1,0 +1,73 @@
+/* ============================================================
+   DESIGN TOKENS — RoveStack
+   ============================================================ */
+:root {
+  /* Colors */
+  --ink: #0e1116;
+  --ink-soft: #1c2026;
+  --paper: #f5f1ea;
+  --paper-warm: #ede7db;
+  --paper-deep: #e4dccb;
+  --accent: #ff5b2e;
+  --accent-deep: #e04a1f;
+  --sage: #3e5b47;
+  --sky: #4a6fa5;
+  --gold: #c9a961;
+  --mute: #6b6558;
+  --success: #22c55e;
+
+  /* Gradients */
+  --accent-gradient: linear-gradient(135deg, #ff5b2e 0%, #c9a961 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #e04a1f 0%, #b8924d 100%);
+
+  /* Borders */
+  --line: rgba(14, 17, 22, 0.08);
+  --line-strong: rgba(14, 17, 22, 0.16);
+
+  /* Shadows */
+  --shadow-sm:
+    0 1px 2px rgba(14, 17, 22, 0.04), 0 2px 6px rgba(14, 17, 22, 0.03);
+  --shadow-md:
+    0 4px 12px rgba(14, 17, 22, 0.06), 0 12px 32px rgba(14, 17, 22, 0.05);
+  --shadow-lg:
+    0 8px 24px rgba(14, 17, 22, 0.08), 0 24px 64px rgba(14, 17, 22, 0.08);
+
+  /* Border radius */
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 100px;
+
+  /* Layout */
+  --max-width: 1280px;
+  --padding-x: 32px;
+}
+
+/* ============================================================
+   TAILWIND v4 THEME EXTENSION
+   ============================================================ */
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-warm: var(--paper-warm);
+  --color-paper-deep: var(--paper-deep);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-sage: var(--sage);
+  --color-sky: var(--sky);
+  --color-gold: var(--gold);
+  --color-mute: var(--mute);
+  --color-success: var(--success);
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter Tight", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-sm: var(--radius);
+  --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}

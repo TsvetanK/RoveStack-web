@@ -1,0 +1,350 @@
+/* ============================================================
+   ICON BUTTONS (language / currency in navbar)
+   ============================================================ */
+.icon-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  color: var(--ink);
+}
+.icon-btn:hover {
+  background: rgba(14, 17, 22, 0.06);
+  transform: translateY(-1px);
+}
+.icon-btn.active {
+  background: rgba(14, 17, 22, 0.08);
+}
+.icon-btn .material-icons {
+  font-size: 22px;
+  color: var(--ink);
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  user-select: none;
+}
+
+/* ============================================================
+   POPOVER (language / currency dropdown)
+   ============================================================ */
+.popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+  pointer-events: none;
+  transition:
+    opacity 0.18s,
+    transform 0.18s;
+  z-index: 70;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.popover.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.popover-header {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+  font-weight: 600;
+  padding: 8px 10px 6px;
+}
+.popover-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 450;
+  transition: background 0.12s;
+  text-decoration: none;
+  color: var(--ink);
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: var(--font-sans);
+  text-align: left;
+}
+.popover-item:hover {
+  background: var(--paper-warm);
+}
+.popover-item.selected {
+  background: rgba(255, 91, 46, 0.08);
+  font-weight: 500;
+}
+.pop-flag {
+  font-size: 1.15rem;
+}
+.pop-symbol {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  width: 20px;
+  text-align: center;
+  color: var(--accent);
+}
+.pop-label {
+  flex: 1;
+}
+.pop-sub {
+  font-size: 0.78rem;
+  color: var(--mute);
+  font-family: var(--font-mono);
+}
+.pop-check {
+  color: var(--accent);
+  opacity: 0;
+}
+.popover-item.selected .pop-check {
+  opacity: 1;
+}
+
+/* ============================================================
+   APP STORE BUTTONS
+   ============================================================ */
+.app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 22px 12px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 14px;
+  border: 1px solid var(--ink);
+  text-decoration: none;
+  min-width: 200px;
+  transition:
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.25s,
+    background 0.2s;
+}
+.app-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(14, 17, 22, 0.2);
+  background: #000;
+}
+.app-btn-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-align: left;
+}
+.app-btn-small {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 2px;
+  color: var(--paper);
+}
+.app-btn-large {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+}
+@media (max-width: 560px) {
+  .app-btn {
+    min-width: 0;
+    flex: 1;
+    padding: 10px 16px 10px 14px;
+    gap: 10px;
+  }
+  .app-btn-large {
+    font-size: 1.05rem;
+  }
+}
+
+/* Large size modifier */
+.btn-lg {
+  font-size: 0.98rem !important;
+  padding: 16px 28px !important;
+  gap: 10px !important;
+}
+
+/* ============================================================
+   VIEW TRANSITIONS — CSS RECIPES
+   ============================================================ */
+:root {
+  --duration-exit: 150ms;
+  --duration-enter: 210ms;
+  --duration-move: 400ms;
+}
+
+@keyframes vt-fade {
+  from {
+    filter: blur(3px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes vt-slide {
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
+}
+
+@keyframes vt-slide-y {
+  from {
+    transform: translateY(var(--slide-y-offset, 10px));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes vt-scale-down {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.93);
+    opacity: 0;
+  }
+}
+@keyframes vt-scale-up {
+  from {
+    transform: scale(0.93);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fade */
+::view-transition-old(.fade-out) {
+  animation: var(--duration-exit) ease-in vt-fade reverse;
+}
+::view-transition-new(.fade-in) {
+  animation: var(--duration-enter) ease-out var(--duration-exit) both vt-fade;
+}
+
+/* Slide vertical (Suspense reveal) */
+::view-transition-old(.slide-down) {
+  animation:
+    var(--duration-exit) ease-out both vt-fade reverse,
+    var(--duration-exit) ease-out both vt-slide-y reverse;
+}
+::view-transition-new(.slide-up) {
+  animation:
+    var(--duration-enter) ease-in var(--duration-exit) both vt-fade,
+    var(--duration-move) ease-in both vt-slide-y;
+}
+
+/* Directional navigation (nav-forward / nav-back) */
+::view-transition-old(.nav-forward) {
+  --slide-offset: -60px;
+  animation:
+    var(--duration-exit) ease-in both vt-fade reverse,
+    var(--duration-move) ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --slide-offset: 60px;
+  animation:
+    var(--duration-enter) ease-out var(--duration-exit) both vt-fade,
+    var(--duration-move) ease-in-out both vt-slide;
+}
+::view-transition-old(.nav-back) {
+  --slide-offset: 60px;
+  animation:
+    var(--duration-exit) ease-in both vt-fade reverse,
+    var(--duration-move) ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -60px;
+  animation:
+    var(--duration-enter) ease-out var(--duration-exit) both vt-fade,
+    var(--duration-move) ease-in-out both vt-slide;
+}
+
+/* Scale */
+::view-transition-old(.scale-out) {
+  animation: var(--duration-exit) ease-in vt-scale-down;
+}
+::view-transition-new(.scale-in) {
+  animation: var(--duration-enter) ease-out var(--duration-exit) both
+    vt-scale-up;
+}
+
+/* Shared element morph */
+::view-transition-group(.morph) {
+  animation-duration: var(--duration-move);
+}
+::view-transition-image-pair(.morph) {
+  animation-name: via-blur;
+}
+@keyframes via-blur {
+  30% {
+    filter: blur(3px);
+  }
+}
+
+/* Text morph (avoid raster scaling artefacts) */
+::view-transition-group(.text-morph) {
+  animation-duration: var(--duration-move);
+}
+::view-transition-old(.text-morph) {
+  display: none;
+}
+::view-transition-new(.text-morph) {
+  animation: none;
+  object-fit: none;
+  object-position: left top;
+}
+
+/* Persistent navbar — no animation, keep on top */
+::view-transition-group(persistent-nav) {
+  animation: none;
+  z-index: 50;
+}
+::view-transition-old(persistent-nav) {
+  display: none;
+}
+::view-transition-new(persistent-nav) {
+  animation: none;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
