@@ -1,0 +1,133 @@
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-hero {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+.about-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.about-title {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.about-title em {
+  font-style: italic;
+  color: var(--accent);
+}
+.about-lead {
+  font-size: 1.1rem;
+  color: var(--mute);
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Alternating rows */
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 72px 0;
+  border-top: 1.5px solid var(--line);
+}
+.about-row--reverse {
+  direction: rtl;
+}
+.about-row--reverse > * {
+  direction: ltr;
+}
+.about-row-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.about-row-title {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.about-row-sub {
+  font-size: 1rem;
+  color: var(--mute);
+  line-height: 1.7;
+}
+.about-row-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4/3;
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.about-row-image:hover .about-img {
+  transform: scale(1.03);
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+  padding: 80px 0 20px;
+  border-top: 1.5px solid var(--line);
+  margin-top: 0;
+}
+.about-cta-title {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.about-cta-sub {
+  font-size: 1rem;
+  color: var(--mute);
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 0;
+  }
+  .about-row--reverse {
+    direction: ltr;
+  }
+  .about-row-image {
+    order: -1;
+  }
+}
